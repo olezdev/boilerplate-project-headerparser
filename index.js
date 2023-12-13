@@ -40,13 +40,6 @@ app.get('/api/hello', (req, res) => {
   res.json({ greeting: 'hello API' });
 });
 
-// ipaddress":"::ffff:159.20.14.100","language":"en-US,en;q=0.5",<br>"software":"Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:50.0) Gecko/20100101 Firefox/50.0
-// app.use((req, res, next) => {
-//   req.language = req.headers['accept-language'];
-//   req.software = req.headers['user-agent'];
-//   next();
-// })
-
 app.get('/api/whoami', (req, res) => {
   const ipaddress = req.ip;
   const language = req.headers['accept-language'];
